@@ -8,5 +8,9 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-mocha": "~2.0.0",
+    "gulp-util": "~3.0.1"
+  }
 }
