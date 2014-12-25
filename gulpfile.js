@@ -17,12 +17,12 @@ gulp.task('watch-gulp', function () {
 
 // coding mocha
 gulp.task('mocha', function () {
-    return gulp.src('./test/**/*.js')
+    return gulp.src('./002_mocha/**/*.js')
         .pipe(mocha({reporter: 'list'}))
         .on('error', gutil.log);
 });
 gulp.task('watch-mocha', function () {
-    gulp.watch('./test/**/*.js', ['mocha']);
+    gulp.watch('./002_mocha/**/*.js', ['mocha']);
 });
 
 
