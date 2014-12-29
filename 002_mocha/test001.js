@@ -42,6 +42,100 @@ describe('calc', function () {
 });
 
 
+// 003: Hooks
+describe('hook', function () {
+
+    before(function () {
+        console.log('hook before');
+    });
+    beforeEach(function () {
+        console.log('hook beforeEach');
+    });
+    after(function () {
+        console.log('hook after');
+    });
+    afterEach(function () {
+        console.log('hook afterEach');
+    });
+
+    it('hook-test-01', function () {
+        assert(true, 'hook-test-01 was done.');
+    });
+
+    it('hook-test-02', function () {
+        assert(true, 'hook-test-02 was done.');
+    });
+});
+
+
+// 004: Slow Test
+describe('slow', function () {
+    it('20+ms  needed', function (done) {
+        setTimeout(function () {
+            done();
+        }, 20);
+    });
+    it('50+ms  needed', function (done) {
+        setTimeout(function () {
+            done();
+        }, 50);
+    });
+    it('100+ms needed', function (done) {
+        setTimeout(function () {
+            done();
+        }, 150);
+    });
+});
+
+
+// 005: String Diff
+describe('diff', function () {
+    it('string diff', function () {
+        // assert.equal('John said Hello', 'John says Hello', 'test string diff');
+    });
+});
+
+
+// 006: mocha --reporter list test001.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
