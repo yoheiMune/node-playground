@@ -1,3 +1,20 @@
+var add = require('./sub1');
+var result = add(1, 2);
+console.log(result); // =&gt; 3
+
+var calc = require('./sub2');
+var result1 = calc.add(1, 2);
+console.log(result1); // =&gt; 3
+var result2 = calc.minus(1, 2);
+console.log(result2); // =&gt; -1
+
+var myModule = require('./module');
+console.log(myModule.calc.add(1, 2));
+myModule.print.sayHello();
+
+
+
+
 // 1. 関数として取得
 var sub1 = require('./sub1');
 var sub1 = require('./sub1.js');

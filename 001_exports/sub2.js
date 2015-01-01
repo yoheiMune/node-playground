@@ -1,5 +1,15 @@
-module.exports = {
-    minus: function (a, b) {
-        return a - b;
-    }
+// module.exports = {
+//     add: function (v1, v2) {
+//         return v1 + v2;
+//     },
+//     minus: function (v1, v2) {
+//         return v1 - v2;
+//     }
+// };
+
+module.exports.add = function (v1, v2) {
+    return v1 + v2;  
+};
+module.exports.minus = function (v1, v2) {
+    return v1 - v2;  
 };
