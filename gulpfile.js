@@ -26,6 +26,15 @@ gulp.task('watch-mocha', function () {
 });
 
 
+// Q
+gulp.task('test-q', function () {
+    return gulp.src('./006_q/*.js')
+        .pipe(mocha({report: 'list'}))
+        on('error', gutil.log);
+});
+gulp.task('watch-test-q', function () {
+    gulp.watch('./006_q/*.js', ['test-q']);
+});
 
 
 
