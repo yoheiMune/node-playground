@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "mongodb": "~1.4.26",
-    "q": "^1.1.2"
+    "q": "^1.1.2",
+    "instagram-node-lib": "~0.1.1"
   }
 }
