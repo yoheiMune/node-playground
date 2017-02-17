@@ -14,7 +14,7 @@ class MyClass {
     }
 }
 function func1(val) {
-    // leak.push(val);
+    leak.push(val);
 }
 setInterval(() => {
     let randomData = Math.random().toString();
