@@ -1,0 +1,5 @@
+name: myapp
+script: app.js
+exec_mode: "cluster"
+instances: 0
+log-date-format: "YYYY-MM-DD HH:mm Z"
