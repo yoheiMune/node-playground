@@ -97,3 +97,14 @@ $ pm2 start pm2config.yml
 └──────────┴────┴─────────┴───────┴────────┴─────────┴────────┴─────┴───────────┴──────────┘
  Use `pm2 show <id|name>` to get more details about an app
  ```
+
+ ## 環境変数の指定
+ ```
+$ pm2 start pm2config.json
+$ pm2 start pm2config.json --env production
+
+$ pm2 logs
+3|myapp    | NODE_NEV: production
+3|myapp    | SECRET_KEY: my-production-secret
+3|myapp    | Express app starts, linstening port on 3000.
+ ```

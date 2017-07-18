@@ -3,5 +3,13 @@
     "script": "app.js",
     "exec_mode": "cluster",
     "instances": 0,
-    "log-date-format": "YYYY-MM-DD HH:mm Z"
+    "log-date-format": "YYYY-MM-DD HH:mm Z",
+    "env": {
+        "NODE_ENV": "local",
+        "SECRET_KEY": "my-local-secret"
+    },
+    "env_production": {
+        "NODE_ENV": "production",
+        "SECRET_KEY": "my-production-secret"
+    }
 }
