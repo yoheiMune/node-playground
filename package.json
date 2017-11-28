@@ -14,8 +14,10 @@
     "gulp-util": "~3.0.1"
   },
   "dependencies": {
+    "express": "^4.16.2",
+    "instagram-node-lib": "~0.1.1",
     "mongodb": "~1.4.26",
     "q": "^1.1.2",
-    "instagram-node-lib": "~0.1.1"
+    "socket.io": "^2.0.4"
   }
 }
