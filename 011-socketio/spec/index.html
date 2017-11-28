@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket.IO Samples.</title>
+</head>
+<body>
+    <h1>See your developer console.</h1>
+    <div></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io('http://localhost:7000')
+        socket.on('news', function (data) {
+            console.log('news:', data)
+            socket.emit('my other event', { name : 'Yohei' })
+        })
+
+        /*
+            Use a NameSpace.
+        */
+        const socketMySpace = io('http://localhost:7000/myspace')
+        socketMySpace.on('mynews', function (data) {
+            console.log('mynews:', data)
+        })
+
+        /*
+            Send a specified user (server-side).
+        */
+        const socketSpecifiedUser = io('http://localhost:7000/specified_user')
+        socketSpecifiedUser.on('hi', function (data) {
+            console.log('specified_user:hi', data)
+        })
+
+        /*
+            Send a broadcast message.
+        */
+        const socketBroadcast = io('http://localhost:7000/broadcast')
+        socketBroadcast.on('hi', function (data) {
+            console.log('broadcast:hi', data)
+        })
+
+        /*
+            Use a Room.
+        */
+        const socketRoom = io('http://localhost:7000/room')
+        socketRoom.on('msg1', function (data) {
+            console.log('room:msg1', data)
+        })
+        socketRoom.on('msg2', function (data) {
+            console.log('room:msg2', data)
+        })
+
+    </script>
+</body>
+</html>
