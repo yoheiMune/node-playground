@@ -13,3 +13,9 @@ JWT samples with express4 server.
   - server-one.js
   - server-another.js
 ```
+
+
+memo
+```
+$ ssh-keygen -t rsa
+```
