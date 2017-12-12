@@ -53,19 +53,34 @@ it('basic usage.', () => {
     }
 })
 
-// TODO ここから
-
-it('sign with a private key, and verify with the public key', () => {
+it('sign with a private key, and also verify with the same key', () => {
 
     // Sign with a private key.
     const privateKey = fs.readFileSync(path.join(__dirname, '..', 'keys', 'my-rsa'))
     const token = jwt.sign({ userId : 123 }, privateKey, { algorithm : 'HS256' })
     console.log('token:', token)
 
-    // Verify with the public key.
-    const pubKey = fs.readFileSync(path.join(__dirname, '..', 'keys', 'my-rsa.pub'))
+    // Verify with the private key.
     const data = jwt.verify(token, privateKey, { algorithm : 'HS256' })
     console.log('data:', data)
 })
+
+// it('sign with a private key, and verify with a PUBLIC key', () => {
+
+//     const jwksClient = require('jwks-rsa')
+
+//     // Sign with a private key.
+//     const privateKey = fs.readFileSync(path.join(__dirname, '..', 'keys', 'my-rsa'))
+//     const token = jwt.sign({ userId : 123 }, privateKey, { algorithm : 'RS256' })
+//     console.log('token:', token)
+
+//     // Verify with the private key.
+//     const publicKey = fs.readFileSync(path.join(__dirname, '..', 'keys', 'my-rsa.pub'))
+//     const data = jwt.verify(token, publicKey, { algorithm : 'RS256' })
+//     console.log('data:', data)
+// })
+
+
+
 
 
